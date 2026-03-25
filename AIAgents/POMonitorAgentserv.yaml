@@ -1,19 +1,19 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: ServingTemplate
 metadata:
-  name: POMnoitorAgentServ
+  name: pomonitoragentserv
   annotations:
     scenarios.ai.sap.com/description: "POMonitor Agent"
-    scenarios.ai.sap.com/name: "POMonitorAgent-scenario"
+    scenarios.ai.sap.com/name: "pomonitoragent-scenario"
     executables.ai.sap.com/description: "executable to monitoer logs"
-    executables.ai.sap.com/name: "POMonitorAgent-exec"
+    executables.ai.sap.com/name: "pomonitoragent-exec"
     artifacts.ai.sap.com/textmodel.kind: "model"
     artifacts.ai.sap.com/textmodel.description: "POMonitor Artefact description"
     artifacts.ai.sap.com/textmodel.labels: | 
         {"ext.ai.sap.com/customkey1":"customvalue1", "ext.ai.sap.com/customkey2":"customvalue2"}
   labels:
     ai.sap.com/version: 0.1.0
-    scenarios.ai.sap.com/id: "POMonitorAgent-scenario" 
+    scenarios.ai.sap.com/id: "pomonitoragent-scenario" 
 spec:
   inputs:
     parameters:
