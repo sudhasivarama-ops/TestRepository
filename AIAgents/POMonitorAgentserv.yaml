@@ -16,11 +16,6 @@ metadata:
     scenarios.ai.sap.com/id: "pomonitoragent-scenario" 
 spec:
   inputs:
-    parameters:
-      - name: modelName
-        default: value
-        type: string
-        description: description of the parameter
     artifacts:
       - name: textmodel
   template:
