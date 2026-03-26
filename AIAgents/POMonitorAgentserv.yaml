@@ -15,9 +15,6 @@ metadata:
     ai.sap.com/version: 0.1.0
     scenarios.ai.sap.com/id: "pomonitoragent-scenario" 
 spec:
-  inputs:
-    artifacts:
-      - name: textmodel
   template:
     apiVersion: "serving.kserve.io/v1beta1"
     metadata:
@@ -41,4 +38,4 @@ spec:
             protocol: TCP
           env:
           - name: STORAGE_URI
-            value: "{{inputs.artifacts.textmodel}}"
+            value: ""
