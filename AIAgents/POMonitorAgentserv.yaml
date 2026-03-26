@@ -38,6 +38,3 @@ spec:
             protocol: TCP
           command: [python]
           args: [./btpaiagent.py]
-          env:
-          - name: STORAGE_URI
-            value: ""
