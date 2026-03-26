@@ -36,6 +36,8 @@ spec:
           ports:
           - containerPort: 9001
             protocol: TCP
+          command: [python3]
+          args: [./btpaiagent.py]
           env:
           - name: STORAGE_URI
             value: ""
