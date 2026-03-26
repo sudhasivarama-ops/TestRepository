@@ -29,7 +29,7 @@ spec:
         imagePullSecrets:
           - name: sudhadockerregistry
         minReplicas: 0
-        maxReplicas: 5
+        maxReplicas: 2
         containers:
         - name: kserve-container
           image: docker.io/sudhasivarama/piagentdocimg:latest
