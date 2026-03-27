@@ -34,7 +34,7 @@ spec:
         - name: kserve-container
           image: docker.io/sudhasivarama/piagentdocimg:latest
           ports:
-          - containerPort: 9001
-            protocol: TCP
+            - containerPort: 9001    # customizable port
+              protocol: TCP
           command: [python]
           args: [./btpaiagent.py]
