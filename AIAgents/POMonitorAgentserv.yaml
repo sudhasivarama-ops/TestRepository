@@ -35,7 +35,7 @@ spec:
           command: [python]
           args: [./btpaiagent.py]
           env:
-            - name: AICORE_BASE_URL
+            - name: AI_API_URL
               value: "https://api.ai.prod.eu-central-1.aws.ml.hana.ondemand.com/v2"
           envFrom:
             - secretRef:
