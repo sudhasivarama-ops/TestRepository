@@ -38,3 +38,6 @@ spec:
               protocol: TCP
           command: [python]
           args: [./btpaiagent.py]
+          envFrom:
+            - secretRef:
+                name: ai-core-credentials
