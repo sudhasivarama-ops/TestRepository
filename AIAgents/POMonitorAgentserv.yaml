@@ -32,8 +32,6 @@ spec:
           ports:
             - containerPort: 9001    # customizable port
               protocol: TCP
-          command: [python]
-          args: [./btpaiagent.py]
           env:
             - name: AICORE_BASE_URL # Name of the environment variable that will be available in the image
               valueFrom:
