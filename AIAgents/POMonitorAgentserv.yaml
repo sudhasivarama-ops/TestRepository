@@ -55,3 +55,15 @@ spec:
                 secretKeyRef:
                   name: ai-core-credentials   
                   key: AICORE_CLIENT_SECRET   
+            - name: ENV_HARDCODED
+              value: "here we can hardcode any values we just want to have in the template"
+          command:
+            - python
+            - '-c'
+          args:
+            - |
+              import os
+              print("Hello from SAP AI Core ENV Demo")
+              print(os.environ.get("AICORE_AUTH_URL", "not_set"))
+              print(os.environ.get("ENV_HARDCODED", "not_set"))
+              print(os.environ.get("AICORE_BASE_URL", "not_set"))
