@@ -35,8 +35,23 @@ spec:
           command: [python]
           args: [./btpaiagent.py]
           env:
-            - name: AI_API_URL
-              value: "https://api.ai.prod.eu-central-1.aws.ml.hana.ondemand.com/v2"
-          envFrom:
-            - secretRef:
-                name: ai-core-credentials
+            - name: AICORE_BASE_URL # Name of the environment variable that will be available in the image
+              valueFrom:
+                secretKeyRef:
+                  name: ai-core-credentials  # Name of the generic secret created in SAP AI Core for the Resource Group
+                  key: AICORE_BASE_URL    # Name of the key from the JSON string that is saved as generic secret    
+            - name: AICORE_AUTH_URL 
+              valueFrom:
+                secretKeyRef:
+                  name: ai-core-credentials   
+                  key: AICORE_AUTH_URL    
+            - name: AICORE_CLIENT_ID 
+              valueFrom:
+                secretKeyRef:
+                  name: ai-core-credentials   
+                  key: AICORE_CLIENT_ID   
+            - name: AICORE_CLIENT_SECRET 
+              valueFrom:
+                secretKeyRef:
+                  name: ai-core-credentials   
+                  key: AICORE_CLIENT_SECRET   
