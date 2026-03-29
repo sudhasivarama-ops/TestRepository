@@ -30,7 +30,7 @@ spec:
         - name: kserve-container
           image: docker.io/sudhasivarama/piagentdocimg:latest
           ports:
-            - containerPort: 9001    # customizable port
+            - containerPort: 9002   # customizable port
               protocol: TCP
           env:
             - name: AICORE_BASE_URL # Name of the environment variable that will be available in the image
