@@ -58,10 +58,4 @@ spec:
           command:
             - python
             - '-c'
-          args:
-            - |
-              import os
-              print("Hello from SAP AI Core ENV Demo")
-              print(os.environ.get("AICORE_AUTH_URL", "not_set"))
-              print(os.environ.get("ENV_HARDCODED", "not_set"))
-              print(os.environ.get("AICORE_BASE_URL", "not_set"))
+          args: [./btpaiagent.py]
