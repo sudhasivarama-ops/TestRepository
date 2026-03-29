@@ -53,6 +53,11 @@ spec:
                 secretKeyRef:
                   name: ai-core-credentials   
                   key: AICORE_CLIENT_SECRET   
+            - name: AICORE_RESOURCE_GROUP 
+              valueFrom:
+                secretKeyRef:
+                  name: ai-core-credentials   
+                  key: AICORE_RESOURCE_GROUP   
             - name: ENV_HARDCODED
               value: "hardcoded Val"
           command: [python]
