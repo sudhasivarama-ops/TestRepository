@@ -54,7 +54,7 @@ spec:
                   name: ai-core-credentials   
                   key: AICORE_CLIENT_SECRET   
             - name: ENV_HARDCODED
-              value: "here we can hardcode any values we just want to have in the template"
+              value: "hardcoded Val"
           command:
             - python
             - '-c'
